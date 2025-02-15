@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{9649B915-3FAD-49F0-92D8-7C10D1E44855}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{4ED56600-1010-4671-9E3A-599AA37BEC8D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{4375DB65-C914-4B99-A4F9-D22B290B3742}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{996AA023-6568-4637-AF6E-E8ACDAEF71D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj", "{0F190901-B4CE-4D3F-A852-0195F9B2786E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,10 @@ Global
 		{4375DB65-C914-4B99-A4F9-D22B290B3742}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4375DB65-C914-4B99-A4F9-D22B290B3742}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4375DB65-C914-4B99-A4F9-D22B290B3742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F190901-B4CE-4D3F-A852-0195F9B2786E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F190901-B4CE-4D3F-A852-0195F9B2786E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F190901-B4CE-4D3F-A852-0195F9B2786E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F190901-B4CE-4D3F-A852-0195F9B2786E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,5 +34,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4ED56600-1010-4671-9E3A-599AA37BEC8D} = {9649B915-3FAD-49F0-92D8-7C10D1E44855}
 		{4375DB65-C914-4B99-A4F9-D22B290B3742} = {4ED56600-1010-4671-9E3A-599AA37BEC8D}
+		{0F190901-B4CE-4D3F-A852-0195F9B2786E} = {996AA023-6568-4637-AF6E-E8ACDAEF71D6}
 	EndGlobalSection
 EndGlobal
