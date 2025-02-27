@@ -10,6 +10,7 @@ public static class DependencyInjection
 
 		services.AddDbContext<ApplicationDbContext>(options =>
 		{
+			options.AddInterceptors(new AuditableEntityInterceptor());
 			options.UseSqlServer(connectionString);
 		});
 
