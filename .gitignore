@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+src/Services/Discount/Discount.Grpc/discountdb-shm
+src/Services/Discount/Discount.Grpc/discountdb-wal
+
 # User-specific files
 *.rsuser
 *.suo
