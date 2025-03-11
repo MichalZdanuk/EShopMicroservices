@@ -1,12 +1,19 @@
 ﻿
+using BuildingBlocks.Context;
 using BuildingBlocks.Pagination;
+using Microsoft.Extensions.Logging;
 
 namespace Ordering.Application.Orders.Queries.GetOrders;
-public class GetOrdersHandler(IApplicationDbContext dbContext)
+public class GetOrdersHandler(IApplicationDbContext dbContext, IContext context, ILogger<GetOrdersHandler> logger)
 	: IQueryHandler<GetOrdersQuery, GetOrdersResult>
 {
 	public async Task<GetOrdersResult> Handle(GetOrdersQuery query, CancellationToken cancellationToken)
 	{
+		var authenticatedUserId = context.UserId;
+		logger.LogInformation("successfully authenticated user {authenticatedUserId}", authenticatedUserId);
+		var userRole = context.Role;
+		logger.LogInformation("user with role: {userRole}", userRole);
+
 		var pageIndex = query.PaginationRequest.PageIndex;
 		var pageSize = query.PaginationRequest.PageSize;
 

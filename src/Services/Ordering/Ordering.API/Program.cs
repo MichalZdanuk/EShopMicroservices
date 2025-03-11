@@ -1,3 +1,4 @@
+using BuildingBlocks.Context;
 using Ordering.API;
 using Ordering.Application;
 using Ordering.Infrastructure;
@@ -9,11 +10,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services
 	.AddApplicationServices(builder.Configuration)
 	.AddInfrastructureServices(builder.Configuration)
-	.AddApiServices(builder.Configuration);
+	.AddApiServices(builder.Configuration)
+	.AddSharedAuthentication(builder.Configuration);
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseApiServices();
 
 if (app.Environment.IsDevelopment())

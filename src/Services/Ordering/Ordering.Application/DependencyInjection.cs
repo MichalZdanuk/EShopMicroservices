@@ -1,4 +1,5 @@
 ﻿using BuildingBlocks.Behaviors;
+using BuildingBlocks.Context;
 using BuildingBlocks.Messaging.MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +20,8 @@ public static class DependencyInjection
 
 		services.AddFeatureManagement();
 		services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
+
+		services.AddSharedContext();
 
 		return services;
 	}

@@ -38,6 +38,15 @@ services:
     ports:
       - "1437:1433"
 
+  authenticationdb:
+    container_name: authenticationdb
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=SwN12345678abc!
+    restart: always
+    ports:
+      - "1438:1433"
+
   messagebroker:
     container_name: messagebroker
     hostname: ecommerce-mq
@@ -110,6 +119,9 @@ services:
       - MessageBroker__UserName=guest
       - MessageBroker__Password=guest
       - FeatureManagement__OrderFullfilment=false
+      - Jwt__Authority=http://localhost:5008
+      - Jwt__Audience=Microservices
+      - Jwt__Key=YourSuperVeryVeryLongSecretKeyHere
     depends_on:
       - orderdb
       - messagebroker
@@ -125,6 +137,9 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080
       - ASPNETCORE_HTTPS_PORTS=8081
+      - Jwt__Authority=http://localhost:5008
+      - Jwt__Audience=Microservices
+      - Jwt__Key=YourSuperVeryVeryLongSecretKeyHere
     depends_on:
       - catalog.api
       - basket.api
