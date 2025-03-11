@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<AuthDbContext>(options =>
-	options.UseSqlServer(builder.Configuration.GetConnectionString("AuthDatabase")));
+	options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
 
 var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -48,7 +48,7 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();//wrong when running docker
 
 app.UseAuthorization();
 
