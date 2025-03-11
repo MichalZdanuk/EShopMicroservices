@@ -93,6 +93,17 @@ Once started, you can access the services through the **YARP API Gateway**.
 
 ---
 
+## 🎥 Demo
+
+* przeglądanie oferty produktowej sklepu
+  
+![demo1](https://github.com/user-attachments/assets/0d47165d-1c03-461b-9804-f5612294b16f)
+
+* proces kompletowania koszyka oraz złożenia zamówienia
+
+![demo2](https://github.com/user-attachments/assets/dbd71c06-c152-4597-be5c-a7a4457acc82)
+
+
 ## 📚 Additional Resources
 
 - **Course**: [Microservices Architecture and Implementation on .NET](https://www.udemy.com/course/microservices-architecture-and-implementation-on-dotnet/)
